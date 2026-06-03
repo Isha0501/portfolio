@@ -43,19 +43,13 @@
 
       <!-- ── HERO ── -->
       <section class="hero section">
-        <!-- Background shapes -->
         <div class="hero-shapes" aria-hidden="true">
           <svg class="hero-svg-shapes" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <!-- Large amber circle -->
             <circle cx="680" cy="200" r="260" fill="#D4891A" opacity="0.18"/>
-            <!-- Teal organic blob -->
             <ellipse cx="780" cy="520" rx="180" ry="200" fill="#245F62" opacity="0.2"/>
-            <!-- Small terracotta circle -->
             <circle cx="520" cy="80" r="60" fill="#C1622F" opacity="0.22"/>
-            <!-- Arc / rainbow (sage) -->
             <path d="M 320 680 Q 320 400 600 400 Q 880 400 880 680" stroke="#4A6741" stroke-width="22" fill="none" opacity="0.25" stroke-linecap="round"/>
             <path d="M 360 680 Q 360 440 600 440 Q 840 440 840 680" stroke="#4A6741" stroke-width="14" fill="none" opacity="0.18" stroke-linecap="round"/>
-            <!-- Botanical branch (left) -->
             <g opacity="0.2" transform="translate(20, 120)">
               <line x1="30" y1="300" x2="30" y2="0" stroke="#4A6741" stroke-width="3"/>
               <line x1="30" y1="260" x2="0" y2="200" stroke="#4A6741" stroke-width="2"/>
@@ -67,7 +61,6 @@
               <ellipse cx="-8" cy="105" rx="18" ry="10" fill="#4A6741" transform="rotate(-30 -8 105)"/>
               <ellipse cx="77" cy="75" rx="18" ry="10" fill="#4A6741" transform="rotate(30 77 75)"/>
             </g>
-            <!-- Sun/dots cluster -->
             <circle cx="460" cy="500" r="8" fill="#D4891A" opacity="0.3"/>
             <circle cx="486" cy="510" r="5" fill="#D4891A" opacity="0.22"/>
             <circle cx="472" cy="528" r="6" fill="#D4891A" opacity="0.26"/>
@@ -107,6 +100,7 @@
             <span class="status-dot"></span>
             <p>Currently pursuing an MS in Data Science at Northeastern University, Boston. 4.0 GPA.</p>
           </div>
+          <!-- 3 metric cards — Impact card removed (single-project stat) -->
           <div class="metric-grid">
             <article class="metric-card metric-card--teal interactive-card magnetic gsap-fade-up" tabindex="0">
               <div class="card-front">
@@ -121,11 +115,11 @@
             <article class="metric-card metric-card--amber interactive-card magnetic gsap-fade-up" tabindex="0">
               <div class="card-front">
                 <span class="metric-label">Research</span>
-                <strong>3× IEEE Published</strong>
-                <p>Navigation, agriculture, OCR — real-world problems across domains.</p>
+                <strong>4× IEEE Published</strong>
+                <p>Navigation, agriculture, OCR, healthcare — real-world problems across domains.</p>
               </div>
               <div class="card-detail">
-                <p>Published in IEEE Access and IEEE Xplore. Work spans GPS-denied navigation, agricultural supply chains, and handwritten character recognition.</p>
+                <p>Published in IEEE Access and IEEE Xplore. Work spans GPS-denied navigation, agricultural supply chains, handwritten character recognition, and e-healthcare data privacy.</p>
               </div>
             </article>
             <article class="metric-card metric-card--sage interactive-card magnetic gsap-fade-up" tabindex="0">
@@ -138,23 +132,12 @@
                 <p>Five active certifications: AWS Cloud Practitioner, AWS AI Practitioner, Certified Ethical Hacker, Java Full Stack Developer, Intro to MongoDB.</p>
               </div>
             </article>
-            <article class="metric-card metric-card--terra interactive-card magnetic gsap-fade-up" tabindex="0">
-              <div class="card-front">
-                <span class="metric-label">Impact</span>
-                <strong>45% No-Show Gap</strong>
-                <p>CourtAccess AI addresses a real justice gap at the Massachusetts Trial Court.</p>
-              </div>
-              <div class="card-detail">
-                <p>Built and deployed a legal document translation platform on GCP for the Massachusetts Trial Court, where 45% of scheduled court interpreters fail to appear.</p>
-              </div>
-            </article>
           </div>
         </aside>
       </section>
 
       <!-- ── ABOUT ── -->
       <section id="about" class="section about-section">
-        <!-- Decorative arc background shape -->
         <div class="about-shapes" aria-hidden="true">
           <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="500" cy="80" r="140" fill="#C1622F" opacity="0.12"/>
@@ -194,6 +177,25 @@
           <h2 class="display-heading">Work<br><em>Experience.</em></h2>
         </div>
         <div class="timeline">
+
+          <!-- Upcoming: Boehringer Ingelheim -->
+          <article class="timeline-card timeline-card--upcoming interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="timeline-top">
+              <div>
+                <h3>Boehringer Ingelheim</h3>
+                <p class="timeline-role">IT Advanced Applications, AI Intern · On-site</p>
+              </div>
+              <span class="timeline-date timeline-date--upcoming">Jul – Dec 2026</span>
+            </div>
+            <ul class="timeline-points card-front">
+              <li>Incoming fall internship in AI &amp; Advanced Applications — joining July 27, 2026 through December 23, 2026.</li>
+              <li>Stay tuned — more to come once this chapter begins. ✦</li>
+            </ul>
+            <div class="card-detail">
+              <p>One of the world's leading research-driven pharmaceutical companies. Details to follow — watch this space.</p>
+            </div>
+          </article>
+
           <article class="timeline-card interactive-card magnetic gsap-fade-up" tabindex="0">
             <div class="timeline-top">
               <div>
@@ -210,6 +212,7 @@
               <p>The transformation logic documentation I produced was adopted as the engineering team's primary reference. Identified schema mismatches and value discrepancies at scale before they could reach production.</p>
             </div>
           </article>
+
           <article class="timeline-card interactive-card magnetic gsap-fade-up" tabindex="0">
             <div class="timeline-top">
               <div>
@@ -231,12 +234,10 @@
 
       <!-- ── PROJECTS ── -->
       <section id="projects" class="section projects-section">
-        <!-- Botanical shape background -->
         <div class="projects-shapes" aria-hidden="true">
           <svg viewBox="0 0 700 500" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="600" cy="400" r="200" fill="#C1622F" opacity="0.1"/>
             <circle cx="100" cy="100" r="90" fill="#245F62" opacity="0.1"/>
-            <!-- Botanical leaves top right -->
             <g opacity="0.18" transform="translate(580, 20) rotate(20)">
               <line x1="0" y1="200" x2="0" y2="0" stroke="#4A6741" stroke-width="3"/>
               <ellipse cx="-22" cy="160" rx="20" ry="10" fill="#4A6741" transform="rotate(-40 -22 160)"/>
@@ -252,66 +253,56 @@
           <h2 class="display-heading">Featured<br><em>Projects.</em></h2>
         </div>
         <div class="projects-grid">
-          <article class="project-card project-card--featured project-card--terra interactive-card magnetic gsap-fade-up" tabindex="0">
-            <div class="card-front">
-              <div class="project-meta">
-                <span class="project-tag project-tag--teal">MLOps · NLP · GCP</span>
-                <span class="project-date">Jan – Apr 2026</span>
-              </div>
-              <h3>CourtAccess AI</h3>
-              <p>MLOps platform for legal language access at the Massachusetts Trial Court — where 45% of scheduled interpreters fail to appear.</p>
-              <div class="project-stats">
-                <span>92% context accuracy</span>
-                <span>98% legal term accuracy</span>
-                <span>100+ forms scraped</span>
-              </div>
-            </div>
-            <div class="card-detail">
-              <p>End-to-end legal document translation pipeline (OCR → translation → validation → PDF/Docx reconstruction). 3 production Airflow DAGs deployed as Docker microservices on GCP.</p>
-            </div>
-          </article>
 
-          <article class="project-card project-card--teal interactive-card magnetic gsap-fade-up" tabindex="0">
-            <div class="card-front">
-              <div class="project-meta">
-                <span class="project-tag project-tag--amber">XGBoost · Streamlit · 24h Hackathon</span>
-                <span class="project-date">Aug 2024</span>
-              </div>
-              <h3>Caterpillar Machine Health</h3>
-              <p>Real-time predictive maintenance built in 24 hours. <strong>99.61% accuracy</strong> on held-out test set. Live Twilio SMS alerting.</p>
+          <!-- Featured: CourtAccess AI -->
+          <a class="project-card project-card--featured project-card--terra link-card magnetic gsap-fade-up"
+             href="https://github.com/Isha0501/doc-translation-reconstruction" target="_blank" rel="noreferrer">
+            <div class="project-meta">
+              <span class="project-tag project-tag--teal">MLOps · NLP · GCP</span>
+              <span class="project-date">Jan – Apr 2026</span>
             </div>
-            <div class="card-detail">
-              <p>XGBoost classifier on 14 telematics sensor parameters across 5 machine types, predicting 4-tier component failure risk. Streamlit dashboard with Plotly threshold visualizations.</p>
+            <h3>CourtAccess AI <span class="card-arrow">↗</span></h3>
+            <p>MLOps platform for legal language access at the Massachusetts Trial Court — where 45% of scheduled interpreters fail to appear.</p>
+            <div class="project-stats">
+              <span>92% context accuracy</span>
+              <span>98% legal term accuracy</span>
+              <span>100+ forms scraped</span>
             </div>
-          </article>
+          </a>
 
-          <article class="project-card project-card--amber interactive-card magnetic gsap-fade-up" tabindex="0">
-            <div class="card-front">
-              <div class="project-meta">
-                <span class="project-tag project-tag--sage">Random Forest · ETL · IEEE Xplore</span>
-                <span class="project-date">Jan – May 2025</span>
-              </div>
-              <h3>Crop Yield Prediction</h3>
-              <p>Novel multi-source maize dataset integrating Kaggle, data.gov.in, and NRSC via rainfall-based correlation. <strong>95.5% R²</strong>.</p>
+          <!-- Caterpillar hackathon -->
+          <a class="project-card project-card--teal link-card magnetic gsap-fade-up"
+             href="https://github.com/Isha0501" target="_blank" rel="noreferrer">
+            <div class="project-meta">
+              <span class="project-tag project-tag--amber">XGBoost · Streamlit · 24h Hackathon</span>
+              <span class="project-date">Aug 2024</span>
             </div>
-            <div class="card-detail">
-              <p>Benchmarked Random Forest, XGBoost, CatBoost, and SVR with full ETL pipelines. Addressed critical gaps in existing agricultural supply chain datasets. Published in IEEE Xplore.</p>
-            </div>
-          </article>
+            <h3>Caterpillar Machine Health <span class="card-arrow">↗</span></h3>
+            <p>Real-time predictive maintenance built in 24 hours. <strong>99.61% accuracy</strong> on held-out test set. Live Twilio SMS alerting.</p>
+          </a>
 
-          <article class="project-card project-card--sage interactive-card magnetic gsap-fade-up" tabindex="0">
-            <div class="card-front">
-              <div class="project-meta">
-                <span class="project-tag project-tag--terra">LoRa · Kalman Filter · IEEE Access</span>
-                <span class="project-date">Jul 2024 – May 2025</span>
-              </div>
-              <h3>Smart Forest Navigation</h3>
-              <p>Infrastructure-free navigation in GPS-denied forests using LoRa Time-of-Arrival + IMU sensor fusion. Published in IEEE Access.</p>
+          <!-- Resume Analyzer -->
+          <a class="project-card project-card--amber link-card magnetic gsap-fade-up"
+             href="https://github.com/Isha0501/Resume-Analyzer" target="_blank" rel="noreferrer">
+            <div class="project-meta">
+              <span class="project-tag project-tag--sage">Python · NLP · Parsing</span>
+              <span class="project-date">GitHub</span>
             </div>
-            <div class="card-detail">
-              <p>Extended Kalman Filter for sensor fusion with D* Lite adaptive pathfinding. Enables real-time positioning without GPS or cellular infrastructure.</p>
+            <h3>Resume Analyzer <span class="card-arrow">↗</span></h3>
+            <p>Automated resume parsing and analysis toolkit — extracts skills, experience, and keywords to streamline screening workflows.</p>
+          </a>
+
+          <!-- MoodMap Music -->
+          <a class="project-card project-card--sage link-card magnetic gsap-fade-up"
+             href="https://github.com/Isha0501/MoodMap_music" target="_blank" rel="noreferrer">
+            <div class="project-meta">
+              <span class="project-tag project-tag--terra">Python · ML · Music</span>
+              <span class="project-date">GitHub</span>
             </div>
-          </article>
+            <h3>MoodMap Music <span class="card-arrow">↗</span></h3>
+            <p>Mood-based music mapping and dynamic playlist generation — because pattern recognition applies everywhere, not just production pipelines.</p>
+          </a>
+
         </div>
       </section>
 
@@ -322,35 +313,33 @@
           <h2 class="display-heading">IEEE<br><em>Research.</em></h2>
         </div>
         <div class="horizontal-track">
-          <a class="research-card research-card--teal interactive-card magnetic" tabindex="0"
+          <a class="research-card research-card--teal link-card magnetic" tabindex="0"
              href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer">
-            <div class="card-front">
-              <span class="research-venue">IEEE Access</span>
-              <h3>Smart Forest Navigation Using LoRa &amp; Dynamic Pathfinding</h3>
-              <p>Real-time, infrastructure-free navigation in GPS-denied environments via LoRa ToA + IMU sensor fusion and D* Lite pathfinding.</p>
-              <span class="research-date">Jul 2024 – May 2025</span>
-            </div>
-            <div class="card-detail"><p>View on Google Scholar ↗</p></div>
+            <span class="research-venue">IEEE Access · 2025</span>
+            <h3>Smart Forest Navigation Using LoRa &amp; Dynamic Pathfinding <span class="card-arrow">↗</span></h3>
+            <p>Real-time, infrastructure-free navigation in GPS-denied environments via LoRa ToA + IMU sensor fusion and D* Lite pathfinding.</p>
+            <span class="research-date">Jul 2024 – May 2025 · 3 citations</span>
           </a>
-          <a class="research-card research-card--amber interactive-card magnetic" tabindex="0"
+          <a class="research-card research-card--amber link-card magnetic" tabindex="0"
              href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer">
-            <div class="card-front">
-              <span class="research-venue">IEEE Xplore</span>
-              <h3>Multi-Attributive Crop Yield Prediction — A Comprehensive Analysis</h3>
-              <p>Novel multi-source maize dataset. 95.5% R² using Random Forest, outperforming single-source models.</p>
-              <span class="research-date">Jan – May 2025</span>
-            </div>
-            <div class="card-detail"><p>View on Google Scholar ↗</p></div>
+            <span class="research-venue">IEEE INDISCON · 2025</span>
+            <h3>Multi-Attributive Crop Yield Prediction — A Comprehensive Analysis <span class="card-arrow">↗</span></h3>
+            <p>Novel multi-source maize dataset. 95.5% R² using Random Forest, outperforming single-source models.</p>
+            <span class="research-date">Jan – May 2025</span>
           </a>
-          <a class="research-card research-card--terra interactive-card magnetic" tabindex="0"
+          <a class="research-card research-card--terra link-card magnetic" tabindex="0"
              href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer">
-            <div class="card-front">
-              <span class="research-venue">IEEE Xplore</span>
-              <h3>Categorical Boosting Machine for Tamil OCR Using Shape-Based Features</h3>
-              <p>Handwritten Tamil vowel recognition with CHFR contour-based features and CatBoost + Optuna. 84.36% across 12 classes.</p>
-              <span class="research-date">Mar – Jul 2023</span>
-            </div>
-            <div class="card-detail"><p>View on Google Scholar ↗</p></div>
+            <span class="research-venue">IEEE GCAT · 2024</span>
+            <h3>Privacy-Protected Data Mining &amp; CNN for E-Healthcare Systems <span class="card-arrow">↗</span></h3>
+            <p>Privacy-preserving data mining techniques with CNN for disease classification in e-healthcare, optimising patterns while protecting patient data.</p>
+            <span class="research-date">2024</span>
+          </a>
+          <a class="research-card research-card--sage link-card magnetic" tabindex="0"
+             href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer">
+            <span class="research-venue">IEEE I2CT · 2023</span>
+            <h3>Categorical Boosting Machine for Tamil OCR Using Shape-Based Features <span class="card-arrow">↗</span></h3>
+            <p>Handwritten Tamil vowel recognition with CHFR contour-based features and CatBoost + Optuna. 84.36% across 12 classes on 6,972 samples.</p>
+            <span class="research-date">Mar – Jul 2023</span>
           </a>
         </div>
       </section>
@@ -406,9 +395,7 @@
             <div class="card-front">
               <span class="stack-icon">{ }</span>
               <h3>Languages</h3>
-              <ul>
-                <li>Python</li><li>Java</li><li>R</li><li>C / C++</li>
-              </ul>
+              <ul><li>Python</li><li>Java</li><li>R</li><li>C / C++</li></ul>
             </div>
             <div class="card-detail">
               <p>Python for ML and pipelines, R for statistical analysis, Java for enterprise systems — I move between them based on what the problem actually needs.</p>
@@ -463,43 +450,62 @@
       </section>
 
       <!-- ── CERTIFICATIONS ── -->
+      <!-- NOTE: Replace href="#" with your actual certificate verification URLs -->
       <section class="section cert-section">
         <div class="section-heading gsap-heading">
           <p class="eyebrow">✦ Credentials</p>
           <h2 class="display-heading">Certifications.</h2>
         </div>
         <div class="cert-grid">
-          <div class="cert-card cert-card--teal magnetic gsap-fade-up">
+          <a class="cert-card cert-card--teal link-card magnetic gsap-fade-up"
+             href="https://www.credly.com/badges/b91c0480-9f18-46d2-9ff1-e25ef62ece65/public_url" target="_blank" rel="noreferrer">
             <span class="cert-logo">AWS</span>
-            <div><strong>AWS Cloud Practitioner</strong><p>Amazon Web Services</p></div>
-          </div>
-          <div class="cert-card cert-card--amber magnetic gsap-fade-up">
+            <div>
+              <strong>AWS Cloud Practitioner</strong>
+              <p>Amazon Web Services · Verify ↗</p>
+            </div>
+          </a>
+          <a class="cert-card cert-card--amber link-card magnetic gsap-fade-up"
+             href="https://www.credly.com/badges/167f473c-570a-48d4-aa96-e5b75d4c6541/linked_in_profile" target="_blank" rel="noreferrer">
             <span class="cert-logo">AWS</span>
-            <div><strong>AWS AI Practitioner</strong><p>Amazon Web Services</p></div>
-          </div>
-          <div class="cert-card cert-card--terra magnetic gsap-fade-up">
+            <div>
+              <strong>AWS AI Practitioner</strong>
+              <p>Amazon Web Services · Verify ↗</p>
+            </div>
+          </a>
+          <a class="cert-card cert-card--terra link-card magnetic gsap-fade-up"
+             href="https://aspen.eccouncil.org/VerifyBadge?type=certification&a=mpVJXh5xoEOB878FF8R1wwLqEuKzSB2aATBgd7v8mWI=" target="_blank" rel="noreferrer">
             <span class="cert-logo">EC</span>
-            <div><strong>Certified Ethical Hacker</strong><p>EC-Council</p></div>
-          </div>
-          <div class="cert-card cert-card--sage magnetic gsap-fade-up">
+            <div>
+              <strong>Certified Ethical Hacker</strong>
+              <p>EC-Council · Verify ↗</p>
+            </div>
+          </a>
+          <a class="cert-card cert-card--sage link-card magnetic gsap-fade-up"
+             href="https://learn.mongodb.com/c/u-d1cWTWSsOlRjRO08KTfA" target="_blank" rel="noreferrer">
             <span class="cert-logo">MDB</span>
-            <div><strong>Intro to MongoDB</strong><p>MongoDB University</p></div>
-          </div>
-          <div class="cert-card cert-card--blush magnetic gsap-fade-up">
+            <div>
+              <strong>Intro to MongoDB</strong>
+              <p>MongoDB University · Verify ↗</p>
+            </div>
+          </a>
+          <a class="cert-card cert-card--blush link-card magnetic gsap-fade-up"
+             href="https://drive.google.com/file/d/1K9LxwH8tB3ZF1tRl7HVrLE1CwjUXZQ0h/view?usp=sharing" target="_blank" rel="noreferrer">
             <span class="cert-logo">FS</span>
-            <div><strong>Java Full Stack Developer</strong><p>Full Stack Certification</p></div>
-          </div>
+            <div>
+              <strong>Java Full Stack Developer</strong>
+              <p>View Certificate ↗</p>
+            </div>
+          </a>
         </div>
       </section>
 
       <!-- ── CONTACT ── -->
       <section id="contact" class="section contact-section gsap-heading">
-        <!-- Contact shapes -->
         <div class="contact-shapes" aria-hidden="true">
           <svg viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="600" cy="50" r="180" fill="#F5EDE0" opacity="0.1"/>
             <circle cx="80" cy="350" r="120" fill="#D4891A" opacity="0.14"/>
-            <!-- Botanical right side -->
             <g opacity="0.22" transform="translate(620, 100) rotate(15)">
               <line x1="0" y1="250" x2="0" y2="0" stroke="#F5EDE0" stroke-width="3"/>
               <ellipse cx="-20" cy="200" rx="18" ry="9" fill="#F5EDE0" transform="rotate(-35 -20 200)"/>

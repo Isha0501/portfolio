@@ -777,6 +777,63 @@ body.theme-dark .contact-section { background: color-mix(in srgb, var(--terra) 8
 }
 .contact-link-icon { font-size: 0.85rem; opacity: 0.8; }
 
+/* ── Link cards (project / research / cert — click goes to URL) ── */
+.link-card {
+  cursor: none;
+  display: block;
+  text-decoration: none;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+.link-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-hover);
+}
+/* Remove "tap for more" hint on link cards */
+.link-card::after { display: none; }
+
+.card-arrow {
+  font-style: normal;
+  opacity: 0.5;
+  font-size: 0.8em;
+  transition: opacity 180ms ease, transform 180ms ease;
+  display: inline-block;
+}
+.link-card:hover .card-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+/* ── Upcoming internship badge ── */
+.timeline-card--upcoming {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--teal) 8%, var(--panel-strong)), var(--panel));
+  border-color: color-mix(in srgb, var(--teal) 18%, transparent);
+}
+.timeline-date--upcoming {
+  color: var(--teal);
+  background: var(--teal-soft);
+  border: 1px solid color-mix(in srgb, var(--teal) 22%, transparent);
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em;
+  padding: 5px 14px; border-radius: 999px; white-space: nowrap;
+  position: relative;
+}
+.timeline-date--upcoming::before {
+  content: '✦ Upcoming · ';
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+/* ── 4th research card colour (sage) ── */
+.research-card--sage {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--sage) 14%, var(--panel-strong)), var(--panel));
+  border-color: color-mix(in srgb, var(--sage) 24%, transparent);
+}
+.research-card--sage .research-venue {
+  color: var(--sage); background: var(--sage-soft);
+  border: 1px solid color-mix(in srgb, var(--sage) 22%, transparent);
+}
+
 /* ── Utilities ── */
 .magnetic   { will-change: transform; }
 .gsap-fade-up { will-change: transform, opacity; }
@@ -803,16 +860,82 @@ body.theme-dark .contact-section { background: color-mix(in srgb, var(--terra) 8
 }
 
 @media (max-width: 680px) {
+  /* ── Core layout ── */
   .page-shell { width: min(calc(100% - 32px), var(--max-width)); }
-  .topbar-shell { width: min(calc(100% - 32px), var(--max-width)); flex-wrap: wrap; padding: 10px 0; min-height: auto; gap: 10px; }
-  .nav { gap: 14px; flex-wrap: wrap; }
-  .section { padding: 80px 0; }
-  .hero { padding-top: 24px; }
-  .hero h1 { font-size: clamp(3rem, 16vw, 5rem); }
-  .display-heading { font-size: clamp(2.4rem, 12vw, 4rem); margin-bottom: 40px; }
-  .timeline-top, .edu-top { flex-direction: column; }
+  body { overflow-x: hidden; }
+
+  /* ── Topbar ── */
+  .topbar-shell {
+    width: min(calc(100% - 32px), var(--max-width));
+    flex-wrap: wrap; padding: 10px 0; min-height: auto; gap: 10px;
+  }
+  .nav { gap: 12px; flex-wrap: wrap; }
+  .nav a { font-size: 0.78rem; }
+  .theme-toggle { padding: 6px 10px; }
+
+  /* ── Sections ── */
+  .section { padding: 72px 0; }
+  .hero { padding-top: 24px; gap: 32px; }
+
+  /* ── Hero shapes: shrink & clip so they don't overflow ── */
+  .hero-shapes { inset: -40px -16px -40px -16px; overflow: hidden; }
+  .hero-shapes svg { opacity: 0.7; }
+
+  /* ── Hero typography ── */
+  .hero h1 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
+  .hero-text { font-size: 0.95rem; }
+  .hero-links { gap: 14px; flex-wrap: wrap; }
+
+  /* ── Hero panel: full width, constrained ── */
+  .hero-panel { padding: 18px; width: 100%; box-sizing: border-box; }
+  .metric-grid { gap: 12px; }
+  .metric-card { padding: 16px; }
+  .metric-card strong { font-size: 1.2rem; }
+
+  /* ── Display headings ── */
+  .display-heading { font-size: clamp(2.2rem, 11vw, 3.5rem); margin-bottom: 36px; }
+
+  /* ── Split section ── */
+  .split-section { gap: 24px; }
+  .story-card { padding: 22px; }
+
+  /* ── Timeline ── */
+  .timeline-top { flex-direction: column; gap: 10px; }
+  .timeline-card { padding: 20px; }
+  .timeline-points { font-size: 0.88rem; }
+
+  /* ── Projects ── */
+  .projects-grid { grid-template-columns: 1fr; gap: 16px; }
+  .project-card { padding: 20px; }
+  .project-stats { gap: 8px; }
+  .project-stats span { font-size: 0.7rem; padding: 3px 10px; }
+  .project-tag { font-size: 0.62rem; padding: 3px 10px; }
+
+  /* ── Research cards ── */
+  .research-card { width: min(320px, 85vw); padding: 22px; min-height: 280px; }
+
+  /* ── Education ── */
+  .edu-top { flex-direction: column; gap: 6px; }
+  .edu-shapes { display: none; } /* hide background shapes on mobile */
+
+  /* ── Skills ── */
+  .stack-grid { grid-template-columns: 1fr; gap: 14px; }
+  .stack-card { padding: 20px; }
+
+  /* ── Certifications ── */
+  .cert-grid { flex-direction: column; gap: 12px; }
+  .cert-card { padding: 16px 20px; }
+
+  /* ── Section background shapes: reduce opacity/hide on mobile ── */
+  .about-shapes, .section-shapes-teal, .projects-shapes { opacity: 0.6; }
+
+  /* ── Contact ── */
   .contact-inner { padding: 32px 24px; }
-  body, .interactive-card, .theme-toggle { cursor: auto; }
+  .contact-links { flex-direction: column; gap: 10px; }
+  .contact-link { justify-content: center; }
+
+  /* ── Cursor: disable on touch ── */
+  body, .interactive-card, .theme-toggle, .link-card { cursor: auto; }
   .cursor-orb, .dot-canvas { display: none; }
 }
 
