@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isha Nevatia — Data Scientist & ML Engineer</title>
+  <meta name="description" content="Portfolio of Isha Nevatia — MS Data Science at Northeastern, building ML systems, MLOps platforms, and deployed AI that holds up in production.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor-orb" aria-hidden="true"></div>
+  <div class="canvas-container" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:0;pointer-events:none;">
+    <canvas class="dot-canvas" aria-hidden="true"></canvas>
+  </div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ── NAVBAR ── -->
+  <header class="topbar">
+    <div class="topbar-shell">
+      <a class="brand" href="#home" aria-label="Isha Nevatia — home">
+        <span class="brand-kicker">Portfolio</span>
+        <span class="brand-name">Isha Nevatia</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle magnetic" type="button" aria-label="Toggle colour mode" aria-pressed="false">
+        <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
+        <span class="theme-toggle-label">Light</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <main id="home">
+
+      <!-- ── HERO ── -->
+      <section class="hero section">
+        <!-- Background shapes -->
+        <div class="hero-shapes" aria-hidden="true">
+          <svg class="hero-svg-shapes" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <!-- Large amber circle -->
+            <circle cx="680" cy="200" r="260" fill="#D4891A" opacity="0.18"/>
+            <!-- Teal organic blob -->
+            <ellipse cx="780" cy="520" rx="180" ry="200" fill="#245F62" opacity="0.2"/>
+            <!-- Small terracotta circle -->
+            <circle cx="520" cy="80" r="60" fill="#C1622F" opacity="0.22"/>
+            <!-- Arc / rainbow (sage) -->
+            <path d="M 320 680 Q 320 400 600 400 Q 880 400 880 680" stroke="#4A6741" stroke-width="22" fill="none" opacity="0.25" stroke-linecap="round"/>
+            <path d="M 360 680 Q 360 440 600 440 Q 840 440 840 680" stroke="#4A6741" stroke-width="14" fill="none" opacity="0.18" stroke-linecap="round"/>
+            <!-- Botanical branch (left) -->
+            <g opacity="0.2" transform="translate(20, 120)">
+              <line x1="30" y1="300" x2="30" y2="0" stroke="#4A6741" stroke-width="3"/>
+              <line x1="30" y1="260" x2="0" y2="200" stroke="#4A6741" stroke-width="2"/>
+              <line x1="30" y1="220" x2="70" y2="160" stroke="#4A6741" stroke-width="2"/>
+              <line x1="30" y1="180" x2="-10" y2="110" stroke="#4A6741" stroke-width="2"/>
+              <line x1="30" y1="140" x2="75" y2="80" stroke="#4A6741" stroke-width="2"/>
+              <ellipse cx="-8" cy="195" rx="18" ry="10" fill="#4A6741" transform="rotate(-30 -8 195)"/>
+              <ellipse cx="72" cy="155" rx="18" ry="10" fill="#4A6741" transform="rotate(30 72 155)"/>
+              <ellipse cx="-8" cy="105" rx="18" ry="10" fill="#4A6741" transform="rotate(-30 -8 105)"/>
+              <ellipse cx="77" cy="75" rx="18" ry="10" fill="#4A6741" transform="rotate(30 77 75)"/>
+            </g>
+            <!-- Sun/dots cluster -->
+            <circle cx="460" cy="500" r="8" fill="#D4891A" opacity="0.3"/>
+            <circle cx="486" cy="510" r="5" fill="#D4891A" opacity="0.22"/>
+            <circle cx="472" cy="528" r="6" fill="#D4891A" opacity="0.26"/>
+            <circle cx="450" cy="518" r="4" fill="#D4891A" opacity="0.2"/>
+          </svg>
+        </div>
+
+        <div class="hero-copy gsap-hero-stagger">
+          <p class="eyebrow">MS Data Science · Northeastern University</p>
+          <h1>
+            <span class="hero-name-line">Isha&nbsp;Nevatia</span>
+            <span class="hero-dynamic-line">
+              <span class="typewriter-shell">
+                <span class="typewriter-sizer" aria-hidden="true"></span>
+                <span class="typewriter-live">
+                  <span class="typewriter" aria-live="polite"></span><span class="typewriter-caret" aria-hidden="true"></span>
+                </span>
+              </span>
+            </span>
+          </h1>
+          <p class="hero-text">
+            I turn <em>"what if?"</em> into <em>"it works"</em> — then let the numbers speak for themselves. Builder, pattern-finder, and quietly proud of every system that's held up in production.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary magnetic" href="#contact">Get in touch</a>
+            <a class="button button-secondary magnetic" href="#projects">View my work</a>
+          </div>
+          <div class="hero-links">
+            <a href="https://www.linkedin.com/in/isha-nevatia-58531521a/" target="_blank" rel="noreferrer" class="hero-link magnetic">↗ LinkedIn</a>
+            <a href="https://github.com/Isha0501" target="_blank" rel="noreferrer" class="hero-link magnetic">↗ GitHub</a>
+            <a href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer" class="hero-link magnetic">↗ Scholar</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel gsap-hero-stagger">
+          <div class="status-card magnetic">
+            <span class="status-dot"></span>
+            <p>Currently pursuing an MS in Data Science at Northeastern University, Boston. 4.0 GPA.</p>
+          </div>
+          <div class="metric-grid">
+            <article class="metric-card metric-card--teal interactive-card magnetic gsap-fade-up" tabindex="0">
+              <div class="card-front">
+                <span class="metric-label">Focus</span>
+                <strong>ML &amp; MLOps</strong>
+                <p>End-to-end systems from model training to production deployment.</p>
+              </div>
+              <div class="card-detail">
+                <p>PyTorch, XGBoost, CatBoost, Apache Airflow, Docker, FastAPI, GCP, AWS — the full stack, not just the notebooks.</p>
+              </div>
+            </article>
+            <article class="metric-card metric-card--amber interactive-card magnetic gsap-fade-up" tabindex="0">
+              <div class="card-front">
+                <span class="metric-label">Research</span>
+                <strong>3× IEEE Published</strong>
+                <p>Navigation, agriculture, OCR — real-world problems across domains.</p>
+              </div>
+              <div class="card-detail">
+                <p>Published in IEEE Access and IEEE Xplore. Work spans GPS-denied navigation, agricultural supply chains, and handwritten character recognition.</p>
+              </div>
+            </article>
+            <article class="metric-card metric-card--sage interactive-card magnetic gsap-fade-up" tabindex="0">
+              <div class="card-front">
+                <span class="metric-label">Certified</span>
+                <strong>AWS + CEH</strong>
+                <p>Cloud Practitioner, AI Practitioner, Ethical Hacker, Full Stack.</p>
+              </div>
+              <div class="card-detail">
+                <p>Five active certifications: AWS Cloud Practitioner, AWS AI Practitioner, Certified Ethical Hacker, Java Full Stack Developer, Intro to MongoDB.</p>
+              </div>
+            </article>
+            <article class="metric-card metric-card--terra interactive-card magnetic gsap-fade-up" tabindex="0">
+              <div class="card-front">
+                <span class="metric-label">Impact</span>
+                <strong>45% No-Show Gap</strong>
+                <p>CourtAccess AI addresses a real justice gap at the Massachusetts Trial Court.</p>
+              </div>
+              <div class="card-detail">
+                <p>Built and deployed a legal document translation platform on GCP for the Massachusetts Trial Court, where 45% of scheduled court interpreters fail to appear.</p>
+              </div>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ── ABOUT ── -->
+      <section id="about" class="section about-section">
+        <!-- Decorative arc background shape -->
+        <div class="about-shapes" aria-hidden="true">
+          <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="500" cy="80" r="140" fill="#C1622F" opacity="0.12"/>
+            <path d="M 100 380 Q 100 180 300 180 Q 500 180 500 380" stroke="#245F62" stroke-width="16" fill="none" opacity="0.18" stroke-linecap="round"/>
+            <path d="M 140 380 Q 140 220 300 220 Q 460 220 460 380" stroke="#245F62" stroke-width="10" fill="none" opacity="0.14" stroke-linecap="round"/>
+            <circle cx="80" cy="200" r="40" fill="#D4891A" opacity="0.16"/>
+          </svg>
+        </div>
+        <div class="split-section">
+          <div class="section-heading gsap-heading">
+            <p class="eyebrow">✦ Overview</p>
+            <h2 class="display-heading">The<br><em>Person.</em></h2>
+          </div>
+          <div class="story-card magnetic gsap-fade-up">
+            <p>I'm a builder first. My instinct is always to take something theoretical and make it actually work in the real world — production pipelines, deployed systems, shipped projects. <em>"What if?"</em> into <em>"it works"</em> is genuinely how I operate.</p>
+            <p>Currently completing my MS in Data Science at Northeastern (4.0 GPA), I have a background spanning ML engineering, data architecture, and full-stack development. I've deployed Docker-containerized services on GCP, won hackathons, published in IEEE, and navigated an entirely new country armed with a T pass and a lot of resourcefulness.</p>
+            <p>Outside of code: ARGs, ciphers, logic puzzles, murder mysteries — I lose track of time when a pattern clicks into place. I also write, make things with my hands, and believe that data science is, at its core, just pattern recognition with better tooling.</p>
+            <div class="about-tags">
+              <span class="tag">Boston, MA</span>
+              <span class="tag">Green Card Holder</span>
+              <span class="tag tag--accent">Open to Opportunities</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── EXPERIENCE ── -->
+      <section id="experience" class="section experience-section">
+        <div class="section-shapes-teal" aria-hidden="true">
+          <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="350" cy="150" rx="200" ry="220" fill="#245F62" opacity="0.08"/>
+            <circle cx="60" cy="60" r="55" fill="#D4891A" opacity="0.12"/>
+          </svg>
+        </div>
+        <div class="section-heading gsap-heading">
+          <p class="eyebrow">✦ Timeline</p>
+          <h2 class="display-heading">Work<br><em>Experience.</em></h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-card interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="timeline-top">
+              <div>
+                <h3>Slipstream-IT</h3>
+                <p class="timeline-role">Data &amp; Architecture Intern · Blue Bell, PA</p>
+              </div>
+              <span class="timeline-date timeline-date--teal">Sept – Nov 2023</span>
+            </div>
+            <ul class="timeline-points card-front">
+              <li>Engineered data integration pipelines for a Master Data Management product — profiled and mapped <strong>300+ pharmaceutical attributes</strong> across 4 heterogeneous MS SQL Server source systems.</li>
+              <li>Designed a QA/QC validation framework in Azure Data Studio across <strong>1M+ product records</strong>, reducing troubleshooting time by <strong>35%</strong> and accelerating release timelines.</li>
+            </ul>
+            <div class="card-detail">
+              <p>The transformation logic documentation I produced was adopted as the engineering team's primary reference. Identified schema mismatches and value discrepancies at scale before they could reach production.</p>
+            </div>
+          </article>
+          <article class="timeline-card interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="timeline-top">
+              <div>
+                <h3>Valsco Technology</h3>
+                <p class="timeline-role">HR &amp; Operations Intern · Remote</p>
+              </div>
+              <span class="timeline-date timeline-date--amber">Sept – Dec 2023</span>
+            </div>
+            <ul class="timeline-points card-front">
+              <li>Screened <strong>200+ resumes</strong> and conducted <strong>120+ interviews</strong> across Frontend, Backend, and Marketing for an early-stage startup.</li>
+              <li>Contributed to <strong>20 successful hires</strong>, expanding company headcount by <strong>40%</strong>.</li>
+            </ul>
+            <div class="card-detail">
+              <p>Reading 200+ resumes critically probably made me a much better writer of my own.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── PROJECTS ── -->
+      <section id="projects" class="section projects-section">
+        <!-- Botanical shape background -->
+        <div class="projects-shapes" aria-hidden="true">
+          <svg viewBox="0 0 700 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="600" cy="400" r="200" fill="#C1622F" opacity="0.1"/>
+            <circle cx="100" cy="100" r="90" fill="#245F62" opacity="0.1"/>
+            <!-- Botanical leaves top right -->
+            <g opacity="0.18" transform="translate(580, 20) rotate(20)">
+              <line x1="0" y1="200" x2="0" y2="0" stroke="#4A6741" stroke-width="3"/>
+              <ellipse cx="-22" cy="160" rx="20" ry="10" fill="#4A6741" transform="rotate(-40 -22 160)"/>
+              <ellipse cx="22" cy="130" rx="20" ry="10" fill="#4A6741" transform="rotate(40 22 130)"/>
+              <ellipse cx="-22" cy="100" rx="20" ry="10" fill="#4A6741" transform="rotate(-40 -22 100)"/>
+              <ellipse cx="22" cy="70" rx="20" ry="10" fill="#4A6741" transform="rotate(40 22 70)"/>
+              <ellipse cx="-10" cy="40" rx="16" ry="8" fill="#4A6741" transform="rotate(-20 -10 40)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="section-heading gsap-heading">
+          <p class="eyebrow">✦ Built Things</p>
+          <h2 class="display-heading">Featured<br><em>Projects.</em></h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card project-card--featured project-card--terra interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="card-front">
+              <div class="project-meta">
+                <span class="project-tag project-tag--teal">MLOps · NLP · GCP</span>
+                <span class="project-date">Jan – Apr 2026</span>
+              </div>
+              <h3>CourtAccess AI</h3>
+              <p>MLOps platform for legal language access at the Massachusetts Trial Court — where 45% of scheduled interpreters fail to appear.</p>
+              <div class="project-stats">
+                <span>92% context accuracy</span>
+                <span>98% legal term accuracy</span>
+                <span>100+ forms scraped</span>
+              </div>
+            </div>
+            <div class="card-detail">
+              <p>End-to-end legal document translation pipeline (OCR → translation → validation → PDF/Docx reconstruction). 3 production Airflow DAGs deployed as Docker microservices on GCP.</p>
+            </div>
+          </article>
+
+          <article class="project-card project-card--teal interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="card-front">
+              <div class="project-meta">
+                <span class="project-tag project-tag--amber">XGBoost · Streamlit · 24h Hackathon</span>
+                <span class="project-date">Aug 2024</span>
+              </div>
+              <h3>Caterpillar Machine Health</h3>
+              <p>Real-time predictive maintenance built in 24 hours. <strong>99.61% accuracy</strong> on held-out test set. Live Twilio SMS alerting.</p>
+            </div>
+            <div class="card-detail">
+              <p>XGBoost classifier on 14 telematics sensor parameters across 5 machine types, predicting 4-tier component failure risk. Streamlit dashboard with Plotly threshold visualizations.</p>
+            </div>
+          </article>
+
+          <article class="project-card project-card--amber interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="card-front">
+              <div class="project-meta">
+                <span class="project-tag project-tag--sage">Random Forest · ETL · IEEE Xplore</span>
+                <span class="project-date">Jan – May 2025</span>
+              </div>
+              <h3>Crop Yield Prediction</h3>
+              <p>Novel multi-source maize dataset integrating Kaggle, data.gov.in, and NRSC via rainfall-based correlation. <strong>95.5% R²</strong>.</p>
+            </div>
+            <div class="card-detail">
+              <p>Benchmarked Random Forest, XGBoost, CatBoost, and SVR with full ETL pipelines. Addressed critical gaps in existing agricultural supply chain datasets. Published in IEEE Xplore.</p>
+            </div>
+          </article>
+
+          <article class="project-card project-card--sage interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="card-front">
+              <div class="project-meta">
+                <span class="project-tag project-tag--terra">LoRa · Kalman Filter · IEEE Access</span>
+                <span class="project-date">Jul 2024 – May 2025</span>
+              </div>
+              <h3>Smart Forest Navigation</h3>
+              <p>Infrastructure-free navigation in GPS-denied forests using LoRa Time-of-Arrival + IMU sensor fusion. Published in IEEE Access.</p>
+            </div>
+            <div class="card-detail">
+              <p>Extended Kalman Filter for sensor fusion with D* Lite adaptive pathfinding. Enables real-time positioning without GPS or cellular infrastructure.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── RESEARCH (horizontal scroll) ── -->
+      <section class="section horizontal-scroll-wrapper research-section">
+        <div class="section-heading gsap-heading">
+          <p class="eyebrow">✦ Publications</p>
+          <h2 class="display-heading">IEEE<br><em>Research.</em></h2>
+        </div>
+        <div class="horizontal-track">
+          <a class="research-card research-card--teal interactive-card magnetic" tabindex="0"
+             href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer">
+            <div class="card-front">
+              <span class="research-venue">IEEE Access</span>
+              <h3>Smart Forest Navigation Using LoRa &amp; Dynamic Pathfinding</h3>
+              <p>Real-time, infrastructure-free navigation in GPS-denied environments via LoRa ToA + IMU sensor fusion and D* Lite pathfinding.</p>
+              <span class="research-date">Jul 2024 – May 2025</span>
+            </div>
+            <div class="card-detail"><p>View on Google Scholar ↗</p></div>
+          </a>
+          <a class="research-card research-card--amber interactive-card magnetic" tabindex="0"
+             href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer">
+            <div class="card-front">
+              <span class="research-venue">IEEE Xplore</span>
+              <h3>Multi-Attributive Crop Yield Prediction — A Comprehensive Analysis</h3>
+              <p>Novel multi-source maize dataset. 95.5% R² using Random Forest, outperforming single-source models.</p>
+              <span class="research-date">Jan – May 2025</span>
+            </div>
+            <div class="card-detail"><p>View on Google Scholar ↗</p></div>
+          </a>
+          <a class="research-card research-card--terra interactive-card magnetic" tabindex="0"
+             href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer">
+            <div class="card-front">
+              <span class="research-venue">IEEE Xplore</span>
+              <h3>Categorical Boosting Machine for Tamil OCR Using Shape-Based Features</h3>
+              <p>Handwritten Tamil vowel recognition with CHFR contour-based features and CatBoost + Optuna. 84.36% across 12 classes.</p>
+              <span class="research-date">Mar – Jul 2023</span>
+            </div>
+            <div class="card-detail"><p>View on Google Scholar ↗</p></div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── EDUCATION ── -->
+      <section id="education" class="section education-section">
+        <div class="edu-shapes" aria-hidden="true">
+          <svg viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="420" cy="150" r="160" fill="#D4891A" opacity="0.1"/>
+            <path d="M 0 280 Q 0 80 200 80 Q 400 80 400 280" stroke="#C1622F" stroke-width="14" fill="none" opacity="0.15" stroke-linecap="round"/>
+            <path d="M 40 280 Q 40 120 200 120 Q 360 120 360 280" stroke="#C1622F" stroke-width="9" fill="none" opacity="0.1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="split-section">
+          <div class="section-heading gsap-heading">
+            <p class="eyebrow">✦ Foundation</p>
+            <h2 class="display-heading">Education.</h2>
+          </div>
+          <div class="story-card magnetic gsap-fade-up">
+            <div class="edu-item">
+              <div class="edu-top">
+                <div>
+                  <h3>Northeastern University</h3>
+                  <p class="edu-sub">Master of Science in Data Science · Boston, MA</p>
+                </div>
+                <span class="edu-date">Sept 2025 – Present</span>
+              </div>
+              <div class="edu-meta"><span class="tag tag--amber">4.0 / 4.0 GPA</span></div>
+              <p class="edu-courses">Essentials of Data Science · Database Management Systems · Machine Learning Operations</p>
+            </div>
+            <div class="edu-item">
+              <div class="edu-top">
+                <div>
+                  <h3>Vellore Institute of Technology</h3>
+                  <p class="edu-sub">B.Tech in Computer Science &amp; Engineering · India</p>
+                </div>
+                <span class="edu-date">Sept 2021 – Jun 2025</span>
+              </div>
+              <div class="edu-meta"><span class="tag tag--teal">9.24 / 10 CGPA</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SKILLS ── -->
+      <section id="skills" class="section skills-section">
+        <div class="section-heading gsap-heading">
+          <p class="eyebrow">✦ Technical Knowledge</p>
+          <h2 class="display-heading">Stack &amp;<br><em>Skills.</em></h2>
+        </div>
+        <div class="stack-grid">
+          <article class="stack-card stack-card--teal interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="card-front">
+              <span class="stack-icon">{ }</span>
+              <h3>Languages</h3>
+              <ul>
+                <li>Python</li><li>Java</li><li>R</li><li>C / C++</li>
+              </ul>
+            </div>
+            <div class="card-detail">
+              <p>Python for ML and pipelines, R for statistical analysis, Java for enterprise systems — I move between them based on what the problem actually needs.</p>
+            </div>
+          </article>
+          <article class="stack-card stack-card--amber interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="card-front">
+              <span class="stack-icon">⬡</span>
+              <h3>Machine Learning &amp; AI</h3>
+              <ul>
+                <li>PyTorch · scikit-learn</li>
+                <li>XGBoost · CatBoost</li>
+                <li>NumPy · pandas · spaCy</li>
+                <li>Llama · HuggingFace · NLLB-200</li>
+              </ul>
+            </div>
+            <div class="card-detail">
+              <p>From classical ML to LLMs and OCR pipelines — I pick the right tool for the problem, then make sure it ships.</p>
+            </div>
+          </article>
+          <article class="stack-card stack-card--sage interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="card-front">
+              <span class="stack-icon">☁</span>
+              <h3>MLOps &amp; Cloud</h3>
+              <ul>
+                <li>Apache Airflow · Docker</li>
+                <li>FastAPI · Streamlit</li>
+                <li>GCP · AWS</li>
+                <li>React.js · Spring Boot</li>
+              </ul>
+            </div>
+            <div class="card-detail">
+              <p>Production-grade DAGs, containerised microservices, cloud deployments. The model is only as useful as the system around it.</p>
+            </div>
+          </article>
+          <article class="stack-card stack-card--terra interactive-card magnetic gsap-fade-up" tabindex="0">
+            <div class="card-front">
+              <span class="stack-icon">⬦</span>
+              <h3>Databases &amp; Tools</h3>
+              <ul>
+                <li>MySQL · MS SQL Server</li>
+                <li>MongoDB</li>
+                <li>Azure Data Studio</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+            <div class="card-detail">
+              <p>Comfortable at 1M+ records scale — schema validation, data mapping, transformation logic that the engineering team actually uses.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── CERTIFICATIONS ── -->
+      <section class="section cert-section">
+        <div class="section-heading gsap-heading">
+          <p class="eyebrow">✦ Credentials</p>
+          <h2 class="display-heading">Certifications.</h2>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card cert-card--teal magnetic gsap-fade-up">
+            <span class="cert-logo">AWS</span>
+            <div><strong>AWS Cloud Practitioner</strong><p>Amazon Web Services</p></div>
+          </div>
+          <div class="cert-card cert-card--amber magnetic gsap-fade-up">
+            <span class="cert-logo">AWS</span>
+            <div><strong>AWS AI Practitioner</strong><p>Amazon Web Services</p></div>
+          </div>
+          <div class="cert-card cert-card--terra magnetic gsap-fade-up">
+            <span class="cert-logo">EC</span>
+            <div><strong>Certified Ethical Hacker</strong><p>EC-Council</p></div>
+          </div>
+          <div class="cert-card cert-card--sage magnetic gsap-fade-up">
+            <span class="cert-logo">MDB</span>
+            <div><strong>Intro to MongoDB</strong><p>MongoDB University</p></div>
+          </div>
+          <div class="cert-card cert-card--blush magnetic gsap-fade-up">
+            <span class="cert-logo">FS</span>
+            <div><strong>Java Full Stack Developer</strong><p>Full Stack Certification</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ── -->
+      <section id="contact" class="section contact-section gsap-heading">
+        <!-- Contact shapes -->
+        <div class="contact-shapes" aria-hidden="true">
+          <svg viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="600" cy="50" r="180" fill="#F5EDE0" opacity="0.1"/>
+            <circle cx="80" cy="350" r="120" fill="#D4891A" opacity="0.14"/>
+            <!-- Botanical right side -->
+            <g opacity="0.22" transform="translate(620, 100) rotate(15)">
+              <line x1="0" y1="250" x2="0" y2="0" stroke="#F5EDE0" stroke-width="3"/>
+              <ellipse cx="-20" cy="200" rx="18" ry="9" fill="#F5EDE0" transform="rotate(-35 -20 200)"/>
+              <ellipse cx="20" cy="165" rx="18" ry="9" fill="#F5EDE0" transform="rotate(35 20 165)"/>
+              <ellipse cx="-20" cy="130" rx="18" ry="9" fill="#F5EDE0" transform="rotate(-35 -20 130)"/>
+              <ellipse cx="20" cy="95" rx="18" ry="9" fill="#F5EDE0" transform="rotate(35 20 95)"/>
+              <ellipse cx="-10" cy="55" rx="14" ry="7" fill="#F5EDE0" transform="rotate(-20 -10 55)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="contact-inner">
+          <p class="eyebrow eyebrow--light">✦ Let's Talk</p>
+          <h2 class="display-heading display-heading--light">Get in<br><em>Touch.</em></h2>
+          <p class="contact-sub">Open to internships, research collaborations, and full-time roles in ML engineering and data science.</p>
+          <div class="contact-links">
+            <a class="contact-link magnetic" href="mailto:isha.nev513@gmail.com">
+              <span class="contact-link-icon">✉</span> isha.nev513@gmail.com
+            </a>
+            <a class="contact-link magnetic" href="https://www.linkedin.com/in/isha-nevatia-58531521a/" target="_blank" rel="noreferrer">
+              <span class="contact-link-icon">in</span> LinkedIn
+            </a>
+            <a class="contact-link magnetic" href="https://github.com/Isha0501" target="_blank" rel="noreferrer">
+              <span class="contact-link-icon">gh</span> GitHub
+            </a>
+            <a class="contact-link magnetic" href="https://scholar.google.com/citations?user=sZTbEdkAAAAJ&hl=en" target="_blank" rel="noreferrer">
+              <span class="contact-link-icon">✦</span> Scholar
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
