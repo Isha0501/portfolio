@@ -171,6 +171,7 @@ body.is-hovering-link .cursor-orb {
   background: color-mix(in srgb, var(--bg-elevated) 96%, transparent);
   backdrop-filter: blur(20px) saturate(1.4);
   border-bottom: 1px solid var(--line);
+  transition: opacity 240ms ease;
 }
 .topbar-shell {
   position: relative; z-index: 1;
@@ -179,6 +180,30 @@ body.is-hovering-link .cursor-orb {
   display: flex; align-items: center;
   justify-content: space-between; gap: 24px;
   min-height: 64px;
+  padding: 0;
+  transition: min-height 260ms ease, padding 260ms ease;
+}
+
+/* Scrolled state — collapse to just the name */
+body.is-scrolled .topbar-shell {
+  min-height: 0;
+  padding: 9px 0;
+}
+
+body.is-scrolled .nav {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+}
+body.is-scrolled .theme-toggle-label {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  margin: 0; padding: 0;
+}
+body.is-scrolled .theme-toggle {
+  padding: 7px 10px;
+  gap: 6px;
 }
 .brand {
   position: relative; display: inline-flex;
@@ -200,7 +225,10 @@ body.is-hovering-link .cursor-orb {
 body.is-scrolled .brand-kicker { opacity: 0; }
 body.is-scrolled .brand-name   { opacity: 1; }
 
-.nav { display: flex; gap: 28px; }
+.nav {
+  display: flex; gap: 28px;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
 .nav a {
   font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; color: var(--muted);
   transition: color 180ms ease, transform 180ms ease;
@@ -373,16 +401,24 @@ body.theme-dark .theme-toggle-thumb { transform: translateX(18px); }
   border-color: var(--line-strong);
   box-shadow: var(--shadow-hover);
 }
-.interactive-card { cursor: none; }
+.interactive-card { cursor: none; padding-bottom: 44px; }
 .interactive-card::after {
-  content: "tap for more";
-  position: absolute; right: 18px; bottom: 14px;
-  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: color-mix(in srgb, var(--terra) 36%, transparent);
-  transition: opacity 180ms ease, color 180ms ease;
+  content: "read more ↓";
+  position: absolute; right: 20px; bottom: 16px;
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--terra);
+  opacity: 0.5;
+  transition: opacity 200ms ease, transform 200ms ease;
 }
-.interactive-card:hover::after  { color: color-mix(in srgb, var(--terra) 65%, transparent); }
-.interactive-card.is-expanded::after { opacity: 0; }
+.interactive-card:hover::after {
+  opacity: 0.9;
+  transform: translateY(2px);
+}
+.interactive-card.is-expanded::after {
+  content: "collapse ↑";
+  opacity: 0.5;
+  transform: translateY(0);
+}
 
 /* card flip */
 .card-front > * {
@@ -528,6 +564,10 @@ body.theme-dark .theme-toggle-thumb { transform: translateX(18px); }
 .timeline-date--amber {
   color: var(--amber); background: var(--amber-soft);
   border: 1px solid color-mix(in srgb, var(--amber) 22%, transparent);
+}
+.timeline-teaser {
+  font-size: 0.96rem; line-height: 1.68; color: var(--muted);
+  margin: 14px 0 0;
 }
 .timeline-points { color: var(--muted); font-size: 0.93rem; line-height: 1.72; padding-left: 16px; }
 .timeline-points li + li { margin-top: 12px; }
@@ -865,11 +905,17 @@ body.theme-dark .contact-section { background: color-mix(in srgb, var(--terra) 8
   /* ── Topbar ── */
   .topbar-shell {
     width: min(calc(100% - 32px), var(--max-width));
-    flex-wrap: wrap; padding: 10px 0; min-height: auto; gap: 10px;
+    flex-wrap: wrap; padding: 10px 0; min-height: auto; gap: 0;
+    row-gap: 8px;
   }
-  .nav { gap: 12px; flex-wrap: wrap; }
+  /* Row 1: brand left, toggle right */
+  .brand       { order: 1; flex: 1; }
+  .theme-toggle { order: 2; margin-left: auto; padding: 6px 10px; }
+  /* Row 2: nav full width below */
+  .nav { order: 3; flex-basis: 100%; gap: 12px; flex-wrap: wrap; }
   .nav a { font-size: 0.78rem; }
-  .theme-toggle { padding: 6px 10px; }
+  /* Scrolled state on mobile — still hide nav */
+  body.is-scrolled .nav { opacity: 0; pointer-events: none; }
 
   /* ── Sections ── */
   .section { padding: 72px 0; }

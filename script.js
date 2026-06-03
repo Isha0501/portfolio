@@ -146,7 +146,13 @@ if (typewriterElement) {
 
 // ── Interactive cards (expand/collapse) ──
 interactiveCards.forEach((card) => {
-  const toggle = () => card.classList.toggle("is-expanded");
+  const toggle = () => {
+    card.classList.toggle("is-expanded");
+    // Always snap back to neutral — prevents magnetic drift staying after click
+    if (typeof gsap !== "undefined") {
+      gsap.to(card, { x: 0, y: 0, duration: 0.35, ease: "power2.out" });
+    }
+  };
 
   card.addEventListener("click", (e) => {
     if (e.target instanceof HTMLAnchorElement) return;
