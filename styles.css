@@ -103,7 +103,9 @@ body {
   transition: background-color 320ms ease, color 320ms ease;
   overflow-x: hidden;
 }
-a, button { color: inherit; text-decoration: none; }
+/* Force cursor:none on all interactive elements so the custom cursor always shows */
+a, button, [tabindex], input, select, textarea, label { cursor: none !important; }
+a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 p { margin: 0; }
 ul { margin: 0; padding: 0; list-style: none; }
@@ -624,15 +626,20 @@ body.theme-dark .theme-toggle-thumb { transform: translateX(18px); }
   background: linear-gradient(145deg, color-mix(in srgb, var(--terra) 14%, var(--panel-strong)), var(--panel));
   border-color: color-mix(in srgb, var(--terra) 24%, transparent);
 }
+.research-card--sage {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--sage) 14%, var(--panel-strong)), var(--panel));
+  border-color: color-mix(in srgb, var(--sage) 24%, transparent);
+}
 
 .research-venue {
   display: inline-block; margin-bottom: 16px;
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
   padding: 4px 12px; border-radius: 999px;
 }
-.research-card--teal .research-venue { color: var(--teal); background: var(--teal-soft); border: 1px solid color-mix(in srgb,var(--teal) 22%,transparent); }
+.research-card--teal .research-venue  { color: var(--teal);  background: var(--teal-soft);  border: 1px solid color-mix(in srgb,var(--teal)  22%,transparent); }
 .research-card--amber .research-venue { color: var(--amber); background: var(--amber-soft); border: 1px solid color-mix(in srgb,var(--amber) 22%,transparent); }
 .research-card--terra .research-venue { color: var(--terra); background: var(--terra-soft); border: 1px solid color-mix(in srgb,var(--terra) 22%,transparent); }
+.research-card--sage .research-venue  { color: var(--sage);  background: var(--sage-soft);  border: 1px solid color-mix(in srgb,var(--sage)  22%,transparent); }
 
 .research-card h3 {
   margin: 0 0 14px; font-family: var(--font-display);
@@ -813,15 +820,6 @@ body.theme-dark .contact-section { background: color-mix(in srgb, var(--terra) 8
   color: var(--teal);
   background: var(--teal-soft);
   border: 1px solid color-mix(in srgb, var(--teal) 22%, transparent);
-  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em;
-  padding: 5px 14px; border-radius: 999px; white-space: nowrap;
-  position: relative;
-}
-.timeline-date--upcoming::before {
-  content: '✦ Upcoming · ';
-  font-size: 0.7em;
-  letter-spacing: 0.1em;
-  opacity: 0.7;
 }
 
 /* ── 4th research card colour (sage) ── */
